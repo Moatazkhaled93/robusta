@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "09b2952a-17af-4cf1-814e-cea13d8c3526",
+		"name": "robusta",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get List",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/list?from=3&to=4&date=2023-03-22 12:58:09&trip_id=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"list"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "3"
+						},
+						{
+							"key": "to",
+							"value": "4"
+						},
+						{
+							"key": "date",
+							"value": "2023-03-22 12:58:09"
+						},
+						{
+							"key": "trip_id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Booking",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "seat_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "trip_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "11",
+							"type": "text"
+						},
+						{
+							"key": "from",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "to",
+							"value": "4",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/booking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"booking"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
